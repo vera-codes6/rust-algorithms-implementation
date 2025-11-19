@@ -23,6 +23,7 @@
 /// # Complexity
 /// * Time complexity: O(amount * coins.length)
 /// * Space complexity: O(amount)
+/// 
 pub fn coin_change(coins: &[usize], amount: usize) -> Option<usize> {
     let mut min_coins = vec![None; amount + 1];
     min_coins[0] = Some(0);

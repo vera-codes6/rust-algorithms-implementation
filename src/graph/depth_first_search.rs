@@ -5,14 +5,17 @@ use std::collections::VecDeque;
 //
 // Return a Optional with a vector with history of vertex visiteds
 // or a None if the element not exists on the graph
+
 pub fn depth_first_search(graph: &Graph, root: Vertex, objective: Vertex) -> Option<Vec<u32>> {
     let mut visited: HashSet<Vertex> = HashSet::new();
     let mut history: Vec<u32> = Vec::new();
     let mut queue = VecDeque::new();
+
     queue.push_back(root);
 
     // While there is an element in the queue
     // get the first element of the vertex queue
+
     while let Some(current_vertex) = queue.pop_front() {
         // Added current vertex in the history of visiteds vertex
         history.push(current_vertex.value());
@@ -39,7 +42,6 @@ pub fn depth_first_search(graph: &Graph, root: Vertex, objective: Vertex) -> Opt
 }
 
 // Data Structures
-
 #[derive(Copy, Clone, PartialEq, Eq, Hash)]
 pub struct Vertex(u32);
 #[derive(Copy, Clone, PartialEq, Eq, Hash)]

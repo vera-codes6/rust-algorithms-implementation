@@ -17,9 +17,11 @@ use std::collections::VecDeque;
 /// If the target is not found or there is no path from the root,
 /// `None` is returned.
 ///
+/// 
 pub fn breadth_first_search(graph: &Graph, root: Node, target: Node) -> Option<Vec<u32>> {
     let mut visited: HashSet<Node> = HashSet::new();
     let mut history: Vec<u32> = Vec::new();
+    
     let mut queue = VecDeque::new();
 
     visited.insert(root);
