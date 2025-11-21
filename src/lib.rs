@@ -21,6 +21,8 @@ pub mod string;
 
 #[cfg(test)]
 mod tests {
+    use std::vec;
+
     use super::sorting;
     #[test]
     fn quick_sort() {
@@ -30,10 +32,16 @@ mod tests {
 
         assert!(sorting::is_sorted(&ve1));
 
-        //pre-sorted
-        let mut ve2 = vec![1, 2, 3, 4, 5, 6];
+        //randomized
+        let mut ve2 = vec![3, 6, 1, 5, 2, 4];
         sorting::quick_sort(&mut ve2);
 
         assert!(sorting::is_sorted(&ve2));
+
+        //pre-sorted
+        let mut ve3 = vec![1, 2, 3, 4, 5, 6];
+        sorting::quick_sort(&mut ve3);
+
+        assert!(sorting::is_sorted(&ve3));
     }
 }
