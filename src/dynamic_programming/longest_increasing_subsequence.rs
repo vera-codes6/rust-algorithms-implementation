@@ -80,6 +80,14 @@ mod tests {
     }
 
     #[test]
+    fn test_example_4() {
+        assert_eq!(
+            longest_increasing_subsequence(&[0, 1, 2, 3, 4, 5]),
+            vec![0, 1, 2, 3, 4, 5]
+        );
+    }
+
+    #[test]
     fn test_tle() {
         let mut input_array = vec![0i64; 1e5 as usize];
         let mut expected_result: Vec<i64> = Vec::with_capacity(5e4 as usize);
