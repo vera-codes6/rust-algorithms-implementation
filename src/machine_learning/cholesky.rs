@@ -30,6 +30,9 @@ pub fn cholesky(mat: Vec<f64>, n: usize) -> Vec<f64> {
     res
 }
 
+
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -88,6 +91,7 @@ mod tests {
         let res = cholesky(mat, 0);
         assert_eq!(res, vec![]);
     }
+
 
     #[test]
     fn matrix_with_all_zeros() {
