@@ -31,8 +31,6 @@ pub fn cholesky(mat: Vec<f64>, n: usize) -> Vec<f64> {
 }
 
 
-
-
 #[cfg(test)]
 mod tests {
     use super::*;
