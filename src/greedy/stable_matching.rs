@@ -1,5 +1,7 @@
 use std::collections::{HashMap, VecDeque};
 
+
+
 fn initialize_men(
     men_preferences: &HashMap<String, Vec<String>>,
 ) -> (VecDeque<String>, HashMap<String, usize>) {
