@@ -24,6 +24,7 @@ fn initialize_women(
     current_partner
 }
 
+
 fn precompute_woman_ranks(
     women_preferences: &HashMap<String, Vec<String>>,
 ) -> HashMap<String, HashMap<String, usize>> {
