@@ -24,7 +24,6 @@ fn initialize_women(
     current_partner
 }
 
-
 fn precompute_woman_ranks(
     women_preferences: &HashMap<String, Vec<String>>,
 ) -> HashMap<String, HashMap<String, usize>> {
@@ -70,6 +69,7 @@ fn process_proposal(
             // Woman rejects the proposal, so the man remains free
             free_men.push_back(man.to_string());
         }
+        
     } else {
         // Woman is not engaged, so engage her with this man
         engage_man(man, woman, free_men, current_partner, man_engaged, None);
