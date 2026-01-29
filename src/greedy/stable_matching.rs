@@ -12,6 +12,7 @@ fn initialize_men(
     }
 
     (free_men, next_proposal)
+    
 }
 
 fn initialize_women(
@@ -69,7 +70,6 @@ fn process_proposal(
             // Woman rejects the proposal, so the man remains free
             free_men.push_back(man.to_string());
         }
-        
     } else {
         // Woman is not engaged, so engage her with this man
         engage_man(man, woman, free_men, current_partner, man_engaged, None);
@@ -105,6 +105,7 @@ fn engage_man(
 
 fn finalize_matches(man_engaged: HashMap<String, Option<String>>) -> HashMap<String, String> {
     let mut stable_matches = HashMap::new();
+
     for (man, woman_option) in man_engaged {
         if let Some(woman) = woman_option {
             stable_matches.insert(man, woman);
