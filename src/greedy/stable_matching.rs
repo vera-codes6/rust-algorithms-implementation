@@ -10,9 +10,7 @@ fn initialize_men(
         free_men.push_back(man.clone());
         next_proposal.insert(man.clone(), 0);
     }
-
     (free_men, next_proposal)
-    
 }
 
 fn initialize_women(
