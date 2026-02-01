@@ -10,7 +10,6 @@ fn initialize_men(
         free_men.push_back(man.clone());
         next_proposal.insert(man.clone(), 0);
     }
-
     (free_men, next_proposal)
 }
 
@@ -104,6 +103,7 @@ fn engage_man(
 
 fn finalize_matches(man_engaged: HashMap<String, Option<String>>) -> HashMap<String, String> {
     let mut stable_matches = HashMap::new();
+
     for (man, woman_option) in man_engaged {
         if let Some(woman) = woman_option {
             stable_matches.insert(man, woman);
