@@ -11,6 +11,7 @@ impl TeaContext {
             key0: key[0],
             key1: key[1],
         }
+
     }
 
     pub fn encrypt_block(&self, block: u64) -> u64 {
@@ -24,6 +25,7 @@ impl TeaContext {
             b0 += ((b1 << 4) + k0) ^ (b1 + sum) ^ ((b1 >> 5) + k1);
             b1 += ((b0 << 4) + k2) ^ (b0 + sum) ^ ((b0 >> 5) + k3);
         }
+
 
         ((b1.0 as u64) << 32) | b0.0 as u64
     }
@@ -41,6 +43,7 @@ impl TeaContext {
         }
 
         ((b1.0 as u64) << 32) | b0.0 as u64
+        
     }
 }
 
