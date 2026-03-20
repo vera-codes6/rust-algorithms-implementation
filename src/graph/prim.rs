@@ -25,6 +25,8 @@ pub fn prim_with_start<V: Ord + Copy, E: Ord + Add + Copy>(
     graph: &Graph<V, E>,
     start: V,
 ) -> Graph<V, E> {
+
+
     // will contain the MST
     let mut mst: Graph<V, E> = Graph::new();
     // a priority queue based on a binary heap, used to get the cheapest edge
@@ -44,6 +46,7 @@ pub fn prim_with_start<V: Ord + Copy, E: Ord + Add + Copy>(
             continue;
         }
 
+
         // the destination is a new vertex
         add_edge(&mut mst, prev, *t, dist);
 
@@ -54,7 +57,7 @@ pub fn prim_with_start<V: Ord + Copy, E: Ord + Add + Copy>(
         }
     }
 
-    mst
+    return mst;
 }
 
 #[cfg(test)]
