@@ -60,6 +60,8 @@ pub fn prim_with_start<V: Ord + Copy, E: Ord + Add + Copy>(
     return mst;
 }
 
+
+
 #[cfg(test)]
 mod tests {
     use super::{add_edge, prim, Graph};
@@ -67,8 +69,11 @@ mod tests {
 
     #[test]
     fn empty() {
+
         assert_eq!(prim::<usize, usize>(&BTreeMap::new()), BTreeMap::new());
+    
     }
+
 
     #[test]
     fn single_vertex() {
@@ -95,9 +100,11 @@ mod tests {
         add_edge(&mut graph, 0, 2, 11);
         add_edge(&mut graph, 2, 3, 12);
         add_edge(&mut graph, 2, 4, 13);
+        
         add_edge(&mut graph, 1, 5, 14);
         add_edge(&mut graph, 1, 6, 15);
         add_edge(&mut graph, 3, 7, 16);
+
 
         assert_eq!(prim(&graph), graph);
     }
