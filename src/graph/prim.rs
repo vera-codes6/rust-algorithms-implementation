@@ -54,7 +54,7 @@ pub fn prim_with_start<V: Ord + Copy, E: Ord + Add + Copy>(
         }
     }
 
-    mst
+    return mst;
 }
 
 #[cfg(test)]
@@ -92,6 +92,7 @@ mod tests {
         add_edge(&mut graph, 0, 2, 11);
         add_edge(&mut graph, 2, 3, 12);
         add_edge(&mut graph, 2, 4, 13);
+
         add_edge(&mut graph, 1, 5, 14);
         add_edge(&mut graph, 1, 6, 15);
         add_edge(&mut graph, 3, 7, 16);
