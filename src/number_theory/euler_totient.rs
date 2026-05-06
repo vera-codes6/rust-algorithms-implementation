@@ -4,7 +4,7 @@ pub fn euler_totient(n: u64) -> u64 {
     let mut p = 2;
 
     // Find  all prime factors and apply formula
-    while p.pow(2) <= num {
+    while p * p <= num {
         // Check if p is a divisor of n
         if num.is_multiple_of(p) {
             // If yes, then it is a prime factor
@@ -22,7 +22,7 @@ pub fn euler_totient(n: u64) -> u64 {
         result -= result / num;
     }
 
-    return result;
+    result
 }
 
 #[cfg(test)]
