@@ -33,7 +33,7 @@ pub fn compute_totient(n: i32) -> vec::Vec<i32> {
         }
     }
 
-    phi[1..].to_vec()
+    return phi[1..].to_vec()
 }
 
 #[cfg(test)]
