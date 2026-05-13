@@ -3,11 +3,14 @@ pub fn is_mersenne_prime(n: usize) -> bool {
     if n == 2 {
         return true;
     }
+    
     let mut s = 4;
     let m = 2_usize.pow(std::convert::TryInto::try_into(n).unwrap()) - 1;
+    
     for _ in 0..n - 2 {
-        s = ((s * s) - 2) % m;
+        s = ((s.pow(2)) - 2) % m;
     }
+
     s == 0
 }
 
