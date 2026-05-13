@@ -12,6 +12,8 @@ pub fn kth_factor(n: i32, k: i32) -> i32 {
             return *number;
         }
     }
+
+    // if k is exceed the number of factors, return -1
     -1
 }
 
