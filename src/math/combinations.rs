@@ -6,6 +6,7 @@ pub fn combinations(n: i64, k: i64) -> i64 {
     }
 
     let mut res: i64 = 1;
+    
     for i in 0..k {
         // Calculate the product of (n - i) and update the result
         res *= n - i;
