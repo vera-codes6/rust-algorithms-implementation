@@ -19,6 +19,7 @@ pub fn gaussian_elimination(matrix: &mut [Vec<f32>]) -> Vec<f32> {
 
     // Disable cargo clippy warnings about needless range loops.
     // Checking the diagonal like this is simpler than any alternative.
+
     #[allow(clippy::needless_range_loop)]
     for i in 0..size {
         if matrix[i][i] == 0f32 {
@@ -30,6 +31,7 @@ pub fn gaussian_elimination(matrix: &mut [Vec<f32>]) -> Vec<f32> {
     for i in 0..size {
         result[i] = matrix[i][size] / matrix[i][i];
     }
+    
     result
 }
 
