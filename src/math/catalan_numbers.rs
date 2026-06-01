@@ -13,7 +13,9 @@ const MOD: i64 = 1000000007; // Define your MOD value here
 const MAX: usize = 1005; // Define your MAX value here
 
 pub fn init_catalan() -> Vec<i64> {
+
     let mut catalan = vec![0; MAX];
+    
     catalan[0] = 1;
     catalan[1] = 1;
 
