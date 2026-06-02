@@ -3,7 +3,7 @@ use super::extended_euclidean_algorithm;
 fn mod_inv(x: i32, n: i32) -> Option<i32> {
     let (g, x, _) = extended_euclidean_algorithm(x, n);
     if g == 1 {
-        Some((x % n + n) % n)
+        return Some((x % n + n) % n);
     } else {
         None
     }
