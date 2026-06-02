@@ -14,6 +14,7 @@ pub fn cross_product(vec1: [f64; 3], vec2: [f64; 3]) -> [f64; 3] {
     let x = vec1[1] * vec2[2] - vec1[2] * vec2[1];
     let y = -(vec1[0] * vec2[2] - vec1[2] * vec2[0]);
     let z = vec1[0] * vec2[1] - vec1[1] * vec2[0];
+    
     [x, y, z]
 }
 
