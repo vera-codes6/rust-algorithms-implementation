@@ -26,6 +26,7 @@ pub fn log<T: Into<f64>, U: Into<f64>>(base: U, x: T, tol: f64) -> f64 {
             Substituting x with x-1 yields:
             ln(|x|) = Σ "(-1)^n-1 * (x-1)^n / n"
         */
+        
         while (prev_rez - rez).abs() > tol {
             prev_rez = rez;
             rez += (-1f64).powi(step - 1) * argument.powi(step) / step as f64;
