@@ -11,6 +11,7 @@ where
             (h / 6.0) * (f(x0) + 4.0 * f(x1) + f(x2))
         })
         .sum()
+        
 }
 
 #[cfg(test)]

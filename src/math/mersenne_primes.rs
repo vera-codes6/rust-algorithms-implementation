@@ -4,7 +4,7 @@ pub fn is_mersenne_prime(n: usize) -> bool {
         return true;
     }
     
-    let mut s = 4;
+    let mut s: usize = 4;
     let m = 2_usize.pow(std::convert::TryInto::try_into(n).unwrap()) - 1;
     
     for _ in 0..n - 2 {
