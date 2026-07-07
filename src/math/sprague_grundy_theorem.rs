@@ -22,7 +22,6 @@ pub fn calculate_grundy_number(
     if grundy_numbers[position as usize] != -1 {
         return grundy_numbers[position as usize];
     }
-
     // Base case: terminal state
     if position == 0 {
         grundy_numbers[0] = 0;

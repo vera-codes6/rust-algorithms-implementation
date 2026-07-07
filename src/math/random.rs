@@ -32,6 +32,7 @@ impl PCG32 {
         pcg.next();
         pcg
     }
+
     pub fn new_default(seed: u64) -> Self {
         let multiplier = PCG32_MULTIPLIER;
         let increment = PCG32_INCREMENT;
@@ -58,6 +59,7 @@ impl PCG32 {
         let mut acc_incr = 0u64;
         let mut curr_mlt = self.multiplier;
         let mut curr_inc = self.increment;
+
         while delta > 0 {
             if delta & 1 != 0 {
                 acc_mult = acc_mult.wrapping_mul(curr_mlt);
